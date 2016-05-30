@@ -1,0 +1,6 @@
+
+
+# clusternator ignores
+clusternator.tar.gz
+clusternator.tar.gz.asc
+.private

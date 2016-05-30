@@ -1,0 +1,8 @@
+{
+  "projectId": "please-work",
+  "private": ".private",
+  "clusternatorDir": ".clusternator",
+  "deploymentsDir": ".private/deployments",
+  "useInternalSSL": false,
+  "prTTL": 259200000
+}
