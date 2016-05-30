@@ -6,8 +6,9 @@ machine:
 dependencies:
     pre:
         - 'npm install aws-sdk'
+        - 'npm install -g clusternator the-clusternator-runtime-aws'
     post:
-        - ./.clusternator/decrypt.sh
+      - 'clusternator read-private -p $CLUSTERNATOR_SHARED_KEY'
 deployment:
     pr:
         branch: '/^(?!master$).*/'
@@ -17,4 +18,4 @@ deployment:
         branch: master
         owner: rafkhan
         commands:
-            - 'node ./.clusternator/docker-build.js deploy master'
+          - 'clusternator-runtime-aws ./ $CLUSTERNATOR_HOST deploy master'
