@@ -9,7 +9,7 @@ dependencies:
       - 'npm install aws-sdk'
       - 'npm install -g clusternator the-clusternator-runtime-aws'
     post:
-      - 'clusternator read-private -p $CLUSTERNATOR_SHARED_KEY'
+      - ' gpg --no-use-agent --quiet --passphrase $CLUSTERNATOR_SHARED_KEY --output clusternator.tar.gz --decrypt clusternator.tar.gz.asc'
 deployment:
     pr:
         branch: '/^(?!master$).*/'
