@@ -5,8 +5,9 @@ machine:
         - docker
 dependencies:
     pre:
-        - 'npm install aws-sdk'
-        - 'npm install -g clusternator the-clusternator-runtime-aws'
+      - 'sudo apt-get install gnupg'
+      - 'npm install aws-sdk'
+      - 'npm install -g clusternator the-clusternator-runtime-aws'
     post:
       - 'clusternator read-private -p $CLUSTERNATOR_SHARED_KEY'
 deployment:
