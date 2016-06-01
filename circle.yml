@@ -16,7 +16,7 @@ deployment:
     pr:
         branch: '/^(?!master$).*/'
         commands:
-            - 'node ./.clusternator/docker-build.js pr'
+          - 'clusternator-runtime-aws ./ $CLUSTERNATOR_HOST pr'
     deploy:
         branch: master
         owner: rafkhan
